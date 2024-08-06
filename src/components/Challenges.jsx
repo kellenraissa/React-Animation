@@ -45,6 +45,8 @@ export default function Challenges() {
         {displayedChallenges.length > 0 && (
           <motion.ol
           key="list"
+          initial={{opacity: 0, y: -20}}
+        animate={{ opcity: 1, y:0}}
           exit={{y: -30, opcity: 0}} className="challenge-items">
             <AnimatePresence>
             {displayedChallenges.map((challenge) => (
